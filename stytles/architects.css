@@ -17,6 +17,14 @@
     border: 0;
 
 }
+.text-light-gray {
+    color: #727272;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 26px;
+
+}
 
 header {
     background: rgba(255, 144, 14, 0.10);
@@ -66,23 +74,16 @@ nav li a {
     color: #131313;
 }
 
-.banner-dsc {
-    color: #727272;
-    text-align: center;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 26px;
 
-}
 .banner img{
     margin-top: 30px;
     width: 100%;
 }
 /* team container styles */
 main{
-    width: 1440px;
-    margin: 0 auto;
-
+    max-width: 1440px;
+    margin: 70px auto;
+    /* padding: 50px 200px; */
 }
 .team-container{
     display: flex;
@@ -112,28 +113,47 @@ main{
 
 }
 .quick-list-text{
-    color:  #727272;
+    /* color:  #727272; */
     font-weight: 500;
 }
 /* responsive styles */
-@media screen and (max-width:576px){
+@media screen and (max-width: 576px){
     header {
         padding: 20px;
     
     }
-    nav{
+    main{
+        width: auto;
+    }
+    nav,
+    .team-container{
         flex-direction: column;
     }
+    .team-img-container{
+        grid-template-columns: 1fr;
+    }
+    .team-content{
+        padding-left: 20px;
+        padding-right: 20px;
     
-    
+    }
+
+   
 }
 @media screen and (min-width:576px) and (max-width:992px) {
     header {
         padding: 50px;
     
     }
-    nav{
+    nav,
+    .team-container{
         flex-direction: column;
     }
+    .team-content{
+        padding-left: 20px;
+        padding-right: 20px;
+    
+    }
+
     
 }
